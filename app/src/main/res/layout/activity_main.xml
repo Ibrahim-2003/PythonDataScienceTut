@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".MainActivity">
+
+    <GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:alignmentMode="alignMargins"
+        android:columnCount="1"
+        android:padding="10dp"
+        android:rowCount="2">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/DataTran"
+            android:layout_width="191dp"
+            android:layout_height="147dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_margin="12dp"
+            android:onClick="onClickWebCardview"
+            app:cardBackgroundColor="#F6F6F6"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="15dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/advent_pro"
+                    android:padding="5dp"
+                    android:text="Web Search"
+                    android:textAlignment="center"
+                    android:textColor="#3A3A3A"
+                    android:textSize="30sp" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:cropToPadding="true"
+                    android:padding="10dp"
+                    app:srcCompat="@drawable/weblogo" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/WebTran"
+            android:layout_width="191dp"
+            android:layout_height="147dp"
+            android:layout_rowWeight="2"
+            android:layout_columnWeight="1"
+            android:layout_margin="12dp"
+            app:cardBackgroundColor="#F6F6F6"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="12dp"
+            android:onClick="onClickDataCardview">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/advent_pro"
+                    android:padding="5dp"
+                    android:text="Data Science"
+                    android:textAlignment="center"
+                    android:textColor="#3A3A3A"
+                    android:textSize="30sp" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:cropToPadding="true"
+                    android:padding="10dp"
+                    app:srcCompat="@drawable/python" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </GridLayout>
+
+
+</RelativeLayout>
